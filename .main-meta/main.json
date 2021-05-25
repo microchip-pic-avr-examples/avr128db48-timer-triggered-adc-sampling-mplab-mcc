@@ -4,27 +4,27 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.avr128db48-timer-triggered-adc-sampling-mplab-mcc",
-        "version": "",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "Timer Triggered ADC Sampling",
         "projectName": "avr128db48-timer-triggered-adc-sampling-mplab-mcc",
-        "shortDescription": "",
+        "shortDescription": "This example shows how to configure the Analog-to-Digital Converter (ADC) to trigger a conversion on a specific event. The Timer/Counter type A (TCA)  overflow is used to trigger the ADC sample accumulation and ADC result is transmitted through USART",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ""
+            "semverRange": ">=5.45.0"
         },
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": ""
+                "semverRange": "^2.31.0"
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "AVR-Dx_DFP",
+            "semverRange": "^1.7.88"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "MCC",
+            "semverRange": ">=4.1.0"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -32,16 +32,46 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "",
+                "name": "AVR128DB48",
                 "versionRange": "*"
             }
         },
-        "author": "",
+        "author": "Rupali Honrao",
         "subcategories": [
+		    [
+                "Peripherals", "ADC"
+            ],
+            [
+                "Peripherals", "USART"
+            ],
+            [
+                "Peripherals", "PORT"
+            ],
+            [
+                "Peripherals", "CLKCTRL"
+            ],
+			[
+                "Peripherals", "TCA"
+            ],
+			[
+                "Peripherals", "EVSYS"
+            ]
         ],
         "peripherals": [
+			"ADC","USART","PORT","CLKCTRL","TCA","EVSYS"
         ],
         "keywords": [
+			"8/16 bit timer",
+			"Curiosity Nano",
+			"Melody",
+			"12-bit ADC",
+			"Oversampling",
+            "Sample-accumulation",
+			"CDC",
+            "Virtual COM Port",
+            "Data Visualizer",
+			"Event System"
+			
         ],
         "additionalData": {
             "longDescription": {
