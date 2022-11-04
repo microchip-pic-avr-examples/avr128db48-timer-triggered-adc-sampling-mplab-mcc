@@ -1,14 +1,14 @@
 /**
- * System Driver Header File
  * 
- * @file system.h
- * 
- * @defgroup systemdriver System Driver
- * 
- * @brief This is the generated header file for the System Driver.
+ * @file evsys.h
  *
- * @version Driver Version 1.0.1
-*/
+ * @defgroup evsys_driver Event System
+ *
+ * @brief This file contains API prototypes for EVSYS driver.
+ *
+ * @version EVSYS Driver Version 1.1.0
+ */
+
 /*
 © [2022] Microchip Technology Inc. and its subsidiaries.
 
@@ -30,40 +30,33 @@
     THIS SOFTWARE.
 */
 
+#ifndef EVSYS_H_INCLUDED
+#define EVSYS_H_INCLUDED
 
-#ifndef MCC_H
-#define	MCC_H
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-/**
-  Section: Included Files
-*/
 #include "../system/utils/compiler.h"
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../adc/adc0.h"
-#include "../system/clock.h"
-#include "../evsys/evsys.h"
-#include "../timer/tca0.h"
-#include "../uart/usart3.h"
-#include "../vref/vref.h"
-#include "../system/interrupt.h"
-/**
- * @ingroup systemdriver
- * @brief This initializes the system module and must be called before any other API is called.
- * This routine should only be called once during system initialization.
- * @param None
- * @return None
-*/
-void SYSTEM_Initialize(void);
 
-#ifdef __cplusplus
-}
-#endif
-#endif	/* MCC_H */
 /**
- End of File
-*/
+ * @ingroup evsys_driver
+ * @brief Initializes the EVSYS driver. 
+ * @param none
+ * @return none
+ */
+int8_t EVSYS_Initialize(void);
+
+/**
+ * @ingroup evsys_driver
+ * @brief Updates the SWEVENTA register.
+ * @param channel - 8-bit integer representing event channel that generates a software event. For example to select CH0(CHANNEL0) set value as 0x1.
+ * @return none
+ */
+void EVSYS_SoftwareEventASet(uint8_t channel);
+
+/**
+ * @ingroup evsys_driver
+ * @brief Updates the SWEVENTB register.
+ * @param channel - 8-bit integer representing event channel that generates a software event. For example to select CH8(CHANNEL8) set value as 0x1.
+ * @return none
+ */
+void EVSYS_SoftwareEventBSet(uint8_t channel);
+
+#endif /* EVSYS_H_INCLUDED */

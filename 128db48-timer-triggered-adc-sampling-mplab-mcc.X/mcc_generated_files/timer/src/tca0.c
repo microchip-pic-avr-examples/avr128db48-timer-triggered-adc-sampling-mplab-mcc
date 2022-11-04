@@ -1,44 +1,33 @@
 /**
-  @Company
-    Microchip Technology Inc.
-
-  @Description
-    This Source file provides APIs.
-    Generation Information :
-    Driver Version    :   2.0.0
+  * TCA0 Generated Driver File
+  *
+  * @file tca0.c
+  *
+  * @ingroup tca0_normal
+  *
+  * @brief This file contains the API implementations for TCA0 module driver in Normal (16-bit) mode.
+  *
+  * @version TCA0 Driver Version 2.1.1
 */
 /*
-Copyright (c) [2012-2020] Microchip Technology Inc.  
+© [2022] Microchip Technology Inc. and its subsidiaries.
 
-    All rights reserved.
-
-    You are permitted to use the accompanying software and its derivatives 
-    with Microchip products. See the Microchip license agreement accompanying 
-    this software, if any, for additional info regarding your rights and 
-    obligations.
-    
-    MICROCHIP SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT 
-    WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT 
-    LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT 
-    AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP OR ITS
-    LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT, NEGLIGENCE, STRICT 
-    LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE 
-    THEORY FOR ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT 
-    LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, 
-    OR OTHER SIMILAR COSTS. 
-    
-    To the fullest extend allowed by law, Microchip and its licensors 
-    liability will not exceed the amount of fees, if any, that you paid 
-    directly to Microchip to use this software. 
-    
-    THIRD PARTY SOFTWARE:  Notwithstanding anything to the contrary, any 
-    third party software accompanying this software is subject to the terms 
-    and conditions of the third party's license agreement.  To the extent 
-    required by third party licenses covering such third party software, 
-    the terms of such license will apply in lieu of the terms provided in 
-    this notice or applicable license.  To the extent the terms of such 
-    third party licenses prohibit any of the restrictions described here, 
-    such restrictions will not apply to such third party software.
+    Subject to your compliance with these terms, you may use Microchip 
+    software and any derivatives exclusively with Microchip products. 
+    You are responsible for complying with 3rd party license terms  
+    applicable to your use of 3rd party software (including open source  
+    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
+    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
+    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
+    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
+    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
+    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
+    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
+    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
+    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
+    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
+    THIS SOFTWARE.
 */
 
 
@@ -135,18 +124,15 @@ ISR(TCA0_OVF_vect)
 }
 
 
-/**
- * \brief Initialize TCA interface
- */
 void TCA0_Initialize(void) {
     // Compare 0
-    TCA0.SINGLE.CMP0 = 0x2;
+    TCA0.SINGLE.CMP0 = 0x0;
         
     // Compare 1
-    TCA0.SINGLE.CMP1 = 0x2;
+    TCA0.SINGLE.CMP1 = 0x0;
     
     // Compare 2
-    TCA0.SINGLE.CMP2 = 0x2;
+    TCA0.SINGLE.CMP2 = 0x0;
         
     // Count
     TCA0.SINGLE.CNT = 0x0;
@@ -235,39 +221,39 @@ void TCA0_DisableInterrupt(void)
 }
 void TCA0_ClearOverflowInterruptFlag(void)
 {
-    TCA0.SINGLE.INTFLAGS &= ~TCA_SINGLE_OVF_bm; /* Overflow Interrupt: disabled */
+    TCA0.SINGLE.INTFLAGS = TCA_SINGLE_OVF_bm; /* Clear Overflow Interrupt Flag */
 }
-bool TCA0_IsOverflowInterruptEnabled(void)
+bool TCA0_IsOverflowInterruptFlagSet(void)
 {
     return ((TCA0.SINGLE.INTFLAGS & TCA_SINGLE_OVF_bm) > 0);
 }
 
 void TCA0_ClearCMP0InterruptFlag(void)
 {
-    TCA0.SINGLE.INTFLAGS &= ~TCA_SINGLE_CMP0_bm; /* Compare Channel-0 Interrupt: disabled */
+    TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP0_bm; /* Clear Compare Channel-0 Interrupt Flag */
 }
 
-bool TCA0_IsCMP0InterruptEnabled(void)
+bool TCA0_IsCMP0InterruptFlagSet(void)
 {
     return ((TCA0.SINGLE.INTFLAGS & TCA_SINGLE_CMP0_bm) > 0);
 }
 
 void TCA0_ClearCMP1InterruptFlag(void)
 {
-    TCA0.SINGLE.INTFLAGS &= ~TCA_SINGLE_CMP1_bm; /* Compare Channel-1 Interrupt: disabled */
+    TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP1_bm; /* Clear Compare Channel-1 Interrupt Flag */
 }
 
-bool TCA0_IsCMP1InterruptEnabled(void)
+bool TCA0_IsCMP1InterruptFlagSet(void)
 {
     return ((TCA0.SINGLE.INTFLAGS & TCA_SINGLE_CMP1_bm) > 0);
 }
 
 void TCA0_ClearCMP2InterruptFlag(void)
 {
-    TCA0.SINGLE.INTFLAGS &= ~TCA_SINGLE_CMP2_bm; /* Compare Channel-2 Interrupt: disabled */
+    TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP2_bm; /* Clear Compare Channel-2 Interrupt Flag */
 }
 
-bool TCA0_IsCMP2InterruptEnabled(void)
+bool TCA0_IsCMP2InterruptFlagSet(void)
 {
     return ((TCA0.SINGLE.INTFLAGS & TCA_SINGLE_CMP2_bm) > 0);
 }

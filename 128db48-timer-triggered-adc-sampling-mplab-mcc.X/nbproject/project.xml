@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>128db48-timer-triggered-adc-sampling-mplab-mcc</name>
-            <creation-uuid>0a72e6c3-7d18-4eee-b8af-645baeb695b2</creation-uuid>
+            <name>ADC_TIMER_BuildError</name>
+            <creation-uuid>e7965806-d4de-412d-9110-1553a8dc3244</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -15,11 +15,7 @@
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>free</name>
-                    <type>2</type>
-                </confElem>
-                <confElem>
-                    <name>pro</name>
+                    <name>default</name>
                     <type>2</type>
                 </confElem>
             </confList>
