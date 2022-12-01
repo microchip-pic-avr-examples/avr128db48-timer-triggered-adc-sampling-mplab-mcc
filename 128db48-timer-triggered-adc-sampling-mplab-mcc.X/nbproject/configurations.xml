@@ -102,6 +102,7 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>ADC_TIMER_BuildError.mc3</itemPath>
+      <itemPath>avr128db4-timer-triggered-adc-sampling.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

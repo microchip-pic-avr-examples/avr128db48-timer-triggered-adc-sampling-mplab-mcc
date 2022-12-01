@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>ADC_TIMER_BuildError</name>
+            <name>avr128db4-timer-triggered-adc-sampling</name>
             <creation-uuid>e7965806-d4de-412d-9110-1553a8dc3244</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
