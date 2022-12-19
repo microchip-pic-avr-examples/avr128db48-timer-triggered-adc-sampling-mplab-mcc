@@ -38,15 +38,15 @@
         },
         "author": "Rupali Honrao",
         "peripherals": [
-			"ADC","USART","PORT","CLKCTRL","TCA","EVSYS"
+			"ADC","USART","Port","CLKCTRL","TCA","EVSYS"
         ],
         "keywords": [
-			"8/16 bit timer",
+			"8/16-bit Timer",
 			"Curiosity Nano",
 			"Melody",
 			"12-bit ADC",
 			"Oversampling",
-            "Sample-accumulation",
+            "Sample Accumulation",
 			"CDC",
             "Virtual COM Port",
             "Data Visualizer",
